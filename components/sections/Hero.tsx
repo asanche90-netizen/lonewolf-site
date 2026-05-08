@@ -1,19 +1,28 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate min-h-[90vh] flex items-center overflow-hidden px-6 md:px-12 py-24 md:py-32"
+      className="relative isolate min-h-[90vh] flex items-center overflow-hidden"
     >
+      <div className="absolute inset-0 md:left-1/2 -z-10">
+        <Image
+          src="/images/hero/wolf.jpg"
+          alt="Wolf staring directly at camera"
+          fill
+          priority
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover object-center grayscale contrast-[1.3] brightness-[0.9]"
+        />
+      </div>
+
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 75% 60% at 35% 50%, transparent 0%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.8) 100%)",
-        }}
+        className="md:hidden absolute inset-0 -z-10 bg-black/60"
       />
 
-      <div className="relative w-full">
+      <div className="relative w-full md:w-1/2 px-6 md:px-12 py-24 md:py-32">
         <h1 className="font-display uppercase tracking-[-0.02em] leading-[0.9] text-fg text-[clamp(4rem,12vw,11rem)] [text-wrap:balance]">
           We don&rsquo;t brainstorm. We hunt.
         </h1>

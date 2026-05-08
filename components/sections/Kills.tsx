@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 const KILLS: {
@@ -14,7 +15,15 @@ const KILLS: {
     description:
       "Identity system for men who refuse to test below 850 ng/dL.",
     tile: (
-      <div className="relative h-full w-full bg-bg overflow-hidden">
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-01-apex.jpg"
+          alt="Black barbells with weight plates on a gym floor"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
+        />
+        <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
         <span className="absolute top-[14%] left-6 font-display uppercase text-fg leading-[0.85] tracking-[-0.02em] text-[clamp(9rem,58vw,22rem)] whitespace-nowrap">
           Apex
         </span>
@@ -29,13 +38,23 @@ const KILLS: {
     description:
       "Brand and digital design for an invite-only newsletter for early risers and late operators.",
     tile: (
-      <div className="relative h-full w-full bg-bg overflow-hidden flex flex-col justify-center pl-6 pr-2">
-        <span className="font-display uppercase text-fg leading-[0.82] tracking-[-0.03em] text-[clamp(5rem,30vw,14rem)] whitespace-nowrap">
-          4AM
-        </span>
-        <span className="mt-1 md:mt-2 font-display uppercase text-fg leading-[0.82] tracking-[-0.02em] text-[clamp(2.25rem,11vw,5.5rem)] whitespace-nowrap">
-          Club
-        </span>
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-02-4am.jpg"
+          alt="Aerial view of a city skyline at night"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
+        />
+        <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
+        <div className="absolute inset-0 flex flex-col justify-center pl-6 pr-2">
+          <span className="font-display uppercase text-fg leading-[0.82] tracking-[-0.03em] text-[clamp(5rem,30vw,14rem)] whitespace-nowrap">
+            4AM
+          </span>
+          <span className="mt-1 md:mt-2 font-display uppercase text-fg leading-[0.82] tracking-[-0.02em] text-[clamp(2.25rem,11vw,5.5rem)] whitespace-nowrap">
+            Club
+          </span>
+        </div>
       </div>
     ),
   },
