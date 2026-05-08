@@ -65,13 +65,23 @@ const KILLS: {
     description:
       "Identity refresh for a family dentistry practice. We brought predator energy to preventative care.",
     tile: (
-      <div className="relative h-full w-full bg-accent overflow-hidden flex flex-col justify-center pl-6 pr-2">
-        <span className="font-display uppercase text-bg leading-[0.85] tracking-[-0.02em] text-[clamp(4rem,22vw,10rem)] whitespace-nowrap">
-          Valor
-        </span>
-        <span className="mt-3 font-mono uppercase text-bg tracking-[0.1em] text-[clamp(0.875rem,1.6vw,1.25rem)]">
-          Dental
-        </span>
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-03-valor.jpg"
+          alt="Dental tools laid out on a white surface"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover grayscale contrast-[1.4]"
+        />
+        <div className="absolute inset-0 bg-accent mix-blend-multiply opacity-[0.65] transition-opacity duration-200 ease-linear group-hover:opacity-[0.45]" />
+        <div className="absolute inset-0 flex flex-col justify-center pl-6 pr-2">
+          <span className="font-display uppercase text-bg leading-[0.85] tracking-[-0.02em] text-[clamp(4rem,22vw,10rem)] whitespace-nowrap">
+            Valor
+          </span>
+          <span className="mt-3 font-mono uppercase text-bg tracking-[0.1em] text-[clamp(0.875rem,1.6vw,1.25rem)]">
+            Dental
+          </span>
+        </div>
       </div>
     ),
   },
@@ -82,10 +92,20 @@ const KILLS: {
     description:
       "K-1 brand system rooted in discipline, structure, and the early cultivation of grit.",
     tile: (
-      <div className="relative h-full w-full bg-fg overflow-hidden flex items-center pl-6 pr-2">
-        <span className="font-display uppercase text-bg leading-[0.85] tracking-[-0.04em] text-[clamp(4rem,23vw,10rem)] whitespace-nowrap">
-          Monolith
-        </span>
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-04-monolith.jpg"
+          alt="Brutalist concrete building exterior"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
+        />
+        <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
+        <div className="absolute inset-0 flex items-center pl-6 pr-2">
+          <span className="font-display uppercase text-fg leading-[0.85] tracking-[-0.04em] text-[clamp(4rem,23vw,10rem)] whitespace-nowrap">
+            Monolith
+          </span>
+        </div>
       </div>
     ),
   },
