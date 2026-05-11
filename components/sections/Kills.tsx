@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 
+const TILE_SIZES = "(min-width: 768px) 33vw, 100vw";
+
 const KILLS: {
   n: string;
   title: string;
@@ -20,7 +22,7 @@ const KILLS: {
           src="/images/kills/kill-01-apex.jpg"
           alt="Black barbells with weight plates on a gym floor"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={TILE_SIZES}
           className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
         />
         <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
@@ -43,7 +45,7 @@ const KILLS: {
           src="/images/kills/kill-02-4am.jpg"
           alt="Aerial view of a city skyline at night"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={TILE_SIZES}
           className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
         />
         <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
@@ -70,7 +72,7 @@ const KILLS: {
           src="/images/kills/kill-03-valor.jpg"
           alt="Dental tools laid out on a white surface"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={TILE_SIZES}
           className="object-cover grayscale contrast-[1.4]"
         />
         <div className="absolute inset-0 bg-accent mix-blend-multiply opacity-[0.65] transition-opacity duration-200 ease-linear group-hover:opacity-[0.45]" />
@@ -97,13 +99,67 @@ const KILLS: {
           src="/images/kills/kill-04-monolith.jpg"
           alt="Brutalist concrete building exterior"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={TILE_SIZES}
           className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
         />
         <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
         <div className="absolute inset-0 flex items-center pl-6 pr-2">
           <span className="font-display uppercase text-fg leading-[0.85] tracking-[-0.04em] text-[clamp(4rem,23vw,10rem)] whitespace-nowrap">
             Monolith
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    n: "05",
+    title: "Hagia Equinox",
+    sub: "Hospitality & Wellness // 2025",
+    description:
+      "Brand identity and environmental design for the world's most discerning fitness club. Six centuries of sacred architecture, now rated for Olympic deadlifts.",
+    tile: (
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-05-hagia.jpg"
+          alt="Interior of Hagia Sophia with chandeliers and columns"
+          fill
+          sizes={TILE_SIZES}
+          className="object-cover grayscale contrast-[1.4] brightness-[0.85]"
+        />
+        <div className="absolute inset-0 bg-black/50 transition-colors duration-200 ease-linear group-hover:bg-black/30" />
+        <div className="absolute inset-0 flex flex-col justify-center pl-6 pr-2">
+          <span className="font-display uppercase text-fg leading-[0.82] tracking-[-0.03em] text-[clamp(4.5rem,24vw,11rem)] whitespace-nowrap">
+            Hagia
+          </span>
+          <span className="mt-1 md:mt-2 font-display uppercase text-fg leading-[0.82] tracking-[-0.02em] text-[clamp(2rem,9vw,4.5rem)] whitespace-nowrap">
+            Equinox
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    n: "06",
+    title: "Conclave Fertility",
+    sub: "Healthcare // 2025",
+    description:
+      "Identity system for the world's most selective reproductive medicine practice. Some will be chosen. Most will not.",
+    tile: (
+      <div className="relative h-full w-full overflow-hidden">
+        <Image
+          src="/images/kills/kill-06-conclave.jpg"
+          alt="Interior of a Gothic cathedral with vaulted ceiling and columns"
+          fill
+          sizes={TILE_SIZES}
+          className="object-cover grayscale contrast-[1.4]"
+        />
+        <div className="absolute inset-0 bg-accent mix-blend-multiply opacity-[0.65] transition-opacity duration-200 ease-linear group-hover:opacity-[0.45]" />
+        <div className="absolute inset-0 flex flex-col justify-center pl-6 pr-2">
+          <span className="font-display uppercase text-bg leading-[0.85] tracking-[-0.02em] text-[clamp(3rem,17vw,8rem)] whitespace-nowrap">
+            Conclave
+          </span>
+          <span className="mt-3 font-mono uppercase text-bg tracking-[0.1em] text-[clamp(0.875rem,1.6vw,1.25rem)]">
+            Fertility
           </span>
         </div>
       </div>
@@ -121,7 +177,7 @@ export default function Kills() {
         Kills
       </h2>
 
-      <ul className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+      <ul className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 lg:gap-12">
         {KILLS.map((k) => (
           <li key={k.n} className="group">
             <div className="relative aspect-square overflow-hidden">
